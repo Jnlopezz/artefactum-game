@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dbmdrbnos64yu"]
+
+[ext_resource type="PackedScene" uid="uid://bvpjkl5isqbj2" path="res://game/gui/components/system_text/system_text.tscn" id="1_dxxyb"]
+[ext_resource type="Theme" uid="uid://5t26h0dtwa1h" path="res://game/gui/resources/gui_theme.tres" id="2_jqv54"]
+
+[node name="SystemTextHighRes" instance=ExtResource("1_dxxyb")]
+theme = ExtResource("2_jqv54")
