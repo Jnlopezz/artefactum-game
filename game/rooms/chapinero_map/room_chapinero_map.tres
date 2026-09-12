@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://boyn1r0gx4wr2"]
+
+[ext_resource type="Script" path="res://game/rooms/chapinero_map/room_chapinero_map_state.gd" id="1_ijqxr"]
+
+[resource]
+resource_name = "ChapineroMap"
+script = ExtResource("1_ijqxr")
+script_name = "ChapineroMap"
+scene = "res://game/rooms/chapinero_map/room_chapinero_map.tscn"

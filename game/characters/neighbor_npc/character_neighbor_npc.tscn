@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bkgu6f1xu6u5j"]
+
+[ext_resource type="Script" uid="uid://c68qylrtsofsl" path="res://game/characters/neighbor_npc/character_neighbor_npc.gd" id="1_2tmth"]
+[ext_resource type="Texture2D" uid="uid://4gtgikcmtnmd" path="res://game/characters/neighbor_npc/assets/neighbor.png" id="2_bcqt1"]
+
+[node name="CharacterNeighborNpc" type="Area2D" unique_id=1752758048]
+script = ExtResource("1_2tmth")
+dialog_pos = Vector2(0, -216.42076)
+script_name = "NeighborNpc"
+description = "Vecina"
+cursor = 8
+interaction_polygon = PackedVector2Array(-44.150665, -181.99518, 45.392548, -181.99518, 44.771606, -5.522995, -45.392517, -5.5230103)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1767539867]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2385908]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1652898689]
+position = Vector2(0, -94)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bcqt1")
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=112786377]
+visible = false
+polygon = PackedVector2Array(-44.150665, -181.99518, 45.392548, -181.99518, 44.771606, -5.522995, -45.392517, -5.5230103)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=47423019]
+visible = false
+vertices = PackedVector2Array(-50.432907, -188.16452, 51.561844, -188.729, 53.255264, -0.36975098, -51.561844, -1.4986877)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

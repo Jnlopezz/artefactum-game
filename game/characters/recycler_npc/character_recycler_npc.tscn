@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dkyhya71rtmul"]
+
+[ext_resource type="Script" uid="uid://b4ghd214x8ao1" path="res://game/characters/recycler_npc/character_recycler_npc.gd" id="1_0idcf"]
+[ext_resource type="Texture2D" uid="uid://7qs72ddty4ia" path="res://game/characters/recycler_npc/assets/recycler.png" id="2_f4kin"]
+
+[node name="CharacterRecyclerNpc" type="Area2D" unique_id=2099425086]
+script = ExtResource("1_0idcf")
+dialog_pos = Vector2(1.0999756, -225.06056)
+script_name = "RecyclerNpc"
+description = "Reciclador"
+cursor = 8
+interaction_polygon = PackedVector2Array(-49, -190, 49.67105, -189.99998, 49.56578, -3.9473572, -51.052643, -4.3684235)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=453249893]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=918636102]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70982542]
+position = Vector2(0, -98)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_f4kin")
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=453222049]
+visible = false
+polygon = PackedVector2Array(-49, -190, 49.67105, -189.99998, 49.56578, -3.9473572, -51.052643, -4.3684235)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1247635054]
+visible = false
+vertices = PackedVector2Array(-56, -195, 54, -195, 54, -1, -55, -2)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

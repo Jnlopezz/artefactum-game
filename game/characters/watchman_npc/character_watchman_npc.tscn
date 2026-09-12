@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dr8to6peu211f"]
+
+[ext_resource type="Script" uid="uid://can24p5d4dwum" path="res://game/characters/watchman_npc/character_watchman_npc.gd" id="1_vhrwx"]
+[ext_resource type="Texture2D" uid="uid://b36g1pvj22w73" path="res://game/characters/watchman_npc/assets/watchman.png" id="2_1hdc5"]
+
+[node name="CharacterWatchmanNpc" type="Area2D" unique_id=320412786]
+script = ExtResource("1_vhrwx")
+dialog_pos = Vector2(1.6105957, -230.30296)
+script_name = "WatchmanNpc"
+description = "Celador"
+cursor = 8
+interaction_polygon = PackedVector2Array(-48.384247, -188.37373, 51.771057, -188.37373, 51.771057, -1.8947525, -51.165817, -1.7247314)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1479297052]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=911404820]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=178506605]
+position = Vector2(0, -96)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1hdc5")
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1729899582]
+visible = false
+polygon = PackedVector2Array(-48.384247, -188.37373, 51.771057, -188.37373, 51.771057, -1.8947525, -51.165817, -1.7247314)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=619557651]
+visible = false
+vertices = PackedVector2Array(-53.819763, -194.37373, 55.513153, -194.9382, 54.94867, 0.75920105, -54.9487, 0.75920105)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

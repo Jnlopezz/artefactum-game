@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://blrapkr1bo3r3"]
+
+[ext_resource type="Script" uid="uid://bnn6c21ye5xfg" path="res://game/characters/neighbor_npc/character_neighbor_npc_state.gd" id="1_3lxqm"]
+
+[resource]
+resource_name = "NeighborNpc"
+script = ExtResource("1_3lxqm")
+script_name = "NeighborNpc"
+scene = "res://game/characters/neighbor_npc/character_neighbor_npc.tscn"

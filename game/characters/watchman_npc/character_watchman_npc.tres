@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cmxlmrnda8153"]
+
+[ext_resource type="Script" path="res://game/characters/watchman_npc/character_watchman_npc_state.gd" id="1_mq047"]
+
+[resource]
+resource_name = "WatchmanNpc"
+script = ExtResource("1_mq047")
+script_name = "WatchmanNpc"
+scene = "res://game/characters/watchman_npc/character_watchman_npc.tscn"

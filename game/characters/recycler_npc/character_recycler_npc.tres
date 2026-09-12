@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://kv25jm21up85"]
+
+[ext_resource type="Script" path="res://game/characters/recycler_npc/character_recycler_npc_state.gd" id="1_rvwt0"]
+
+[resource]
+resource_name = "RecyclerNpc"
+script = ExtResource("1_rvwt0")
+script_name = "RecyclerNpc"
+scene = "res://game/characters/recycler_npc/character_recycler_npc.tscn"

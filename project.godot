@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ArtefactumGame"
-run/main_scene="uid://dqvh4m143cwuj"
+run/main_scene="res://game/rooms/game_main/room_game_main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -58,10 +58,23 @@ popochiu-skip={
 &"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+UP={
+"deadzone": 0.2,
+"events": [null]
+}
 
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[popochiu]
+
+aseprite_import/import_animation_by_default=false
+aseprite_import/new_props_visible_by_default=false
+aseprite_import/new_props_clickable_by_default=false
+aseprite_import/only_visible_layers=false
+aseprite_import/wipe_old_animations=false
+aseprite_import/autotrace_polygons=false
 
 [rendering]
 

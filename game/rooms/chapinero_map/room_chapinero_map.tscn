@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://s0lawr8fshgb"]
+
+[ext_resource type="Script" uid="uid://bn63edd33x0rh" path="res://game/rooms/chapinero_map/room_chapinero_map.gd" id="1_nuxjy"]
+[ext_resource type="Texture2D" uid="uid://dyfbq3k7ght1k" path="res://game/rooms/chapinero_map/art_assets/Gradiant_bg.png" id="2_5dbtr"]
+[ext_resource type="PackedScene" uid="uid://jtf1uq25fa8j" path="res://game/rooms/chapinero_map/walkable_areas/map_walkable_area/walkable_area_map_walkable_area.tscn" id="2_f4hbe"]
+[ext_resource type="PackedScene" uid="uid://5b3jl36i4itu" path="res://game/characters/player_main/character_player_main.tscn" id="2_lagte"]
+[ext_resource type="Texture2D" uid="uid://40yg72qb82sq" path="res://game/rooms/chapinero_map/art_assets/building_4-1.png" id="3_5yh3e"]
+[ext_resource type="Texture2D" uid="uid://bryrvtcl7xqj5" path="res://game/rooms/chapinero_map/art_assets/street_top.png" id="3_685mo"]
+[ext_resource type="Texture2D" uid="uid://dpcpob2r3xrrw" path="res://game/rooms/chapinero_map/art_assets/street_bg.png" id="4_iqndb"]
+[ext_resource type="Texture2D" uid="uid://rcipnfkriigf" path="res://game/rooms/chapinero_map/art_assets/building_4.png" id="4_m3ody"]
+[ext_resource type="Texture2D" uid="uid://b140kupkxcy3g" path="res://game/rooms/chapinero_map/art_assets/street_top_2.png" id="5_iqndb"]
+[ext_resource type="Texture2D" uid="uid://bkolfc8kohqt0" path="res://game/rooms/chapinero_map/art_assets/building_3.png" id="5_mm6u3"]
+[ext_resource type="Texture2D" uid="uid://umvehf6pct0x" path="res://game/rooms/chapinero_map/art_assets/building_1.png" id="6_yocy7"]
+[ext_resource type="Texture2D" uid="uid://bkvscb6ijkcpn" path="res://game/rooms/chapinero_map/art_assets/building_2.png" id="7_akgkh"]
+[ext_resource type="Texture2D" uid="uid://om7eawokl5t2" path="res://game/rooms/chapinero_map/art_assets/building_5-1.png" id="8_ggg5p"]
+[ext_resource type="Texture2D" uid="uid://dy4bchfebhn2m" path="res://game/rooms/chapinero_map/art_assets/police_building.png" id="12_r0da7"]
+[ext_resource type="Texture2D" uid="uid://b127fjhbcig2s" path="res://game/rooms/chapinero_map/art_assets/Acopio_building.png" id="13_ovudo"]
+[ext_resource type="Texture2D" uid="uid://cy0dlii4xepvh" path="res://game/rooms/chapinero_map/art_assets/building_main_1.png" id="14_fclj2"]
+[ext_resource type="Texture2D" uid="uid://brwig2vmko06i" path="res://game/rooms/chapinero_map/art_assets/building_main_2.png" id="15_o8gjh"]
+[ext_resource type="PackedScene" uid="uid://bkgu6f1xu6u5j" path="res://game/characters/neighbor_npc/character_neighbor_npc.tscn" id="17_m3ody"]
+[ext_resource type="PackedScene" uid="uid://dr8to6peu211f" path="res://game/characters/watchman_npc/character_watchman_npc.tscn" id="18_mm6u3"]
+[ext_resource type="PackedScene" uid="uid://dkyhya71rtmul" path="res://game/characters/recycler_npc/character_recycler_npc.tscn" id="19_yocy7"]
+[ext_resource type="PackedScene" uid="uid://vrpdkg83dcmp" path="res://game/characters/buddy_npc/character_buddy_npc.tscn" id="20_akgkh"]
+
+[node name="RoomChapineroMap" type="Node2D" unique_id=1390192808]
+script = ExtResource("1_nuxjy")
+script_name = "ChapineroMap"
+width = 5760
+height = 1080
+metadata/_edit_vertical_guides_ = [-1926.0]
+
+[node name="Background" type="Node2D" parent="." unique_id=1125690487]
+position = Vector2(960, 540)
+
+[node name="gradient" type="Sprite2D" parent="Background" unique_id=1785527584]
+texture = ExtResource("2_5dbtr")
+
+[node name="gradient2" type="Sprite2D" parent="Background" unique_id=345855045]
+position = Vector2(-1920, 0)
+texture = ExtResource("2_5dbtr")
+
+[node name="gradient3" type="Sprite2D" parent="Background" unique_id=2010973510]
+position = Vector2(1920, 0)
+texture = ExtResource("2_5dbtr")
+
+[node name="Building41" type="Sprite2D" parent="Background" unique_id=162851612]
+position = Vector2(-2387, -64)
+texture = ExtResource("3_5yh3e")
+
+[node name="Building4" type="Sprite2D" parent="Background" unique_id=2048811767]
+position = Vector2(-1432, -69)
+texture = ExtResource("4_m3ody")
+
+[node name="Building5" type="Sprite2D" parent="Background" unique_id=1533746517]
+position = Vector2(-502, -102.599976)
+scale = Vector2(1.2, 1.1999999)
+texture = ExtResource("4_m3ody")
+
+[node name="Building6" type="Sprite2D" parent="Background" unique_id=716660355]
+position = Vector2(514, -64)
+texture = ExtResource("4_m3ody")
+
+[node name="Building7" type="Sprite2D" parent="Background" unique_id=975849179]
+position = Vector2(1186, 12)
+texture = ExtResource("5_mm6u3")
+
+[node name="Building42" type="Sprite2D" parent="Background" unique_id=1570743331]
+position = Vector2(873, -44)
+texture = ExtResource("3_5yh3e")
+
+[node name="Building8" type="Sprite2D" parent="Background" unique_id=1209100241]
+position = Vector2(1328, -74)
+texture = ExtResource("4_m3ody")
+
+[node name="Building43" type="Sprite2D" parent="Background" unique_id=405654576]
+position = Vector2(-1280, -18)
+texture = ExtResource("3_5yh3e")
+
+[node name="Building44" type="Sprite2D" parent="Background" unique_id=182587227]
+position = Vector2(-638, -33)
+texture = ExtResource("3_5yh3e")
+
+[node name="Building9" type="Sprite2D" parent="Background" unique_id=721743554]
+position = Vector2(-416, 7)
+texture = ExtResource("5_mm6u3")
+
+[node name="Building1" type="Sprite2D" parent="Background" unique_id=420565102]
+position = Vector2(-2716, 47)
+texture = ExtResource("6_yocy7")
+
+[node name="Building2" type="Sprite2D" parent="Background" unique_id=2057205567]
+position = Vector2(-1392, 32)
+texture = ExtResource("7_akgkh")
+
+[node name="Building51" type="Sprite2D" parent="Background" unique_id=1048709015]
+position = Vector2(-2438, 2)
+texture = ExtResource("8_ggg5p")
+
+[node name="Building52" type="Sprite2D" parent="Background" unique_id=1634807008]
+position = Vector2(630, 22)
+texture = ExtResource("8_ggg5p")
+
+[node name="Building10" type="Sprite2D" parent="Background" unique_id=2064166623]
+position = Vector2(1040, -3)
+texture = ExtResource("7_akgkh")
+
+[node name="Building11" type="Sprite2D" parent="Background" unique_id=1143007246]
+position = Vector2(-563, 42)
+texture = ExtResource("6_yocy7")
+
+[node name="Building12" type="Sprite2D" parent="Background" unique_id=165879176]
+position = Vector2(337, 37)
+texture = ExtResource("6_yocy7")
+
+[node name="Building3" type="Sprite2D" parent="Background" unique_id=1607121795]
+position = Vector2(-2670, 17)
+texture = ExtResource("5_mm6u3")
+
+[node name="street" type="Sprite2D" parent="Background" unique_id=1764375615]
+position = Vector2(0, 315)
+texture = ExtResource("4_iqndb")
+
+[node name="street2" type="Sprite2D" parent="Background" unique_id=1716205025]
+position = Vector2(-1920, 315)
+texture = ExtResource("4_iqndb")
+
+[node name="street3" type="Sprite2D" parent="Background" unique_id=119472623]
+position = Vector2(1920, 315)
+texture = ExtResource("4_iqndb")
+
+[node name="pavement" type="Sprite2D" parent="Background" unique_id=994213944]
+position = Vector2(-2218, 193)
+texture = ExtResource("3_685mo")
+
+[node name="pavement4" type="Sprite2D" parent="Background" unique_id=1058887148]
+position = Vector2(1401, 194)
+texture = ExtResource("3_685mo")
+
+[node name="pavement2" type="Sprite2D" parent="Background" unique_id=713248138]
+position = Vector2(-940, 193)
+texture = ExtResource("5_iqndb")
+
+[node name="pavement5" type="Sprite2D" parent="Background" unique_id=491796884]
+position = Vector2(2517, 199)
+texture = ExtResource("5_iqndb")
+
+[node name="pavement3" type="Sprite2D" parent="Background" unique_id=136162854]
+position = Vector2(4, 194)
+texture = ExtResource("5_iqndb")
+
+[node name="PoliceBuilding" type="Sprite2D" parent="Background" unique_id=671521346]
+position = Vector2(2512, -104)
+texture = ExtResource("12_r0da7")
+
+[node name="AcopioBuilding" type="Sprite2D" parent="Background" unique_id=2106888044]
+position = Vector2(1700, -90)
+texture = ExtResource("13_ovudo")
+
+[node name="BuildingMain1" type="Sprite2D" parent="Background" unique_id=1665027891]
+position = Vector2(-1933, -96)
+texture = ExtResource("14_fclj2")
+
+[node name="BuildingMain2" type="Sprite2D" parent="Background" unique_id=928003138]
+position = Vector2(-950, -96)
+texture = ExtResource("15_o8gjh")
+
+[node name="BuildingMain3" type="Sprite2D" parent="Background" unique_id=195542089]
+position = Vector2(-7, -99)
+texture = ExtResource("15_o8gjh")
+
+[node name="Characters" type="Node2D" parent="." unique_id=1988778923]
+
+[node name="CharacterPlayerMain *" parent="Characters" unique_id=1659260067 instance=ExtResource("2_lagte")]
+position = Vector2(-1657, 789)
+baseline = 4
+walk_to_point = Vector2(6.147217, 23.905518)
+look_at_point = Vector2(4.2871094, -75.025635)
+metadata/EDITOR_TMP_COPY_OF = "PlayerMain"
+
+[node name="CharacterNeighborNpc *" parent="Characters" unique_id=1752758048 instance=ExtResource("17_m3ody")]
+position = Vector2(-1042, 887)
+walk_to_point = Vector2(22.539429, 17.280273)
+look_at_point = Vector2(2.2539368, -107.43799)
+metadata/EDITOR_TMP_COPY_OF = "NeighborNpc"
+
+[node name="CharacterWatchmanNpc *" parent="Characters" unique_id=320412786 instance=ExtResource("18_mm6u3")]
+position = Vector2(-504, 710)
+walk_to_point = Vector2(17.600037, 19.799927)
+look_at_point = Vector2(3.3000488, -116.60004)
+metadata/EDITOR_TMP_COPY_OF = "WatchmanNpc"
+
+[node name="CharacterRecyclerNpc *" parent="Characters" unique_id=2099425086 instance=ExtResource("19_yocy7")]
+position = Vector2(317, 879)
+walk_to_point = Vector2(9.679993, 25.409973)
+look_at_point = Vector2(-1.2099609, -104.06006)
+metadata/EDITOR_TMP_COPY_OF = "RecyclerNpc"
+
+[node name="CharacterBuddyNpc *" parent="Characters" unique_id=2025185892 instance=ExtResource("20_akgkh")]
+position = Vector2(630, 816)
+walk_to_point = Vector2(10.629395, 35.431213)
+look_at_point = Vector2(3.5430908, -99.2074)
+metadata/EDITOR_TMP_COPY_OF = "BuddyNpc"
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1377913073]
+visible = false
+
+[node name="MapWalkableArea" parent="WalkableAreas" unique_id=943957784 instance=ExtResource("2_f4hbe")]
+
+[node name="Props" type="Node2D" parent="." unique_id=2131694117]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1510158743]
+
+[node name="Regions" type="Node2D" parent="." unique_id=1694423183]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1666086329]

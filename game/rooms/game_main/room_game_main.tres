@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://befi5i8lisxe7"]
+
+[ext_resource type="Script" path="res://game/rooms/game_main/room_game_main_state.gd" id="1_42pcq"]
+
+[resource]
+resource_name = "GameMain"
+script = ExtResource("1_42pcq")
+script_name = "GameMain"
+scene = "res://game/rooms/game_main/room_game_main.tscn"

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b5x7un25ebeal"]
+
+[ext_resource type="Script" uid="uid://gltjrejk1wco" path="res://game/rooms/game_main/room_game_main.gd" id="1_crnfd"]
+[ext_resource type="Theme" uid="uid://b5awa6jrdax3n" path="res://game/themes/main_font_theme.tres" id="2_f080w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ksv1"]
+bg_color = Color(0.15696436, 0.32091138, 0.43517774, 1)
+
+[node name="RoomGameMain" type="Node2D" unique_id=1924210319]
+script = ExtResource("1_crnfd")
+script_name = "GameMain"
+has_player = false
+width = 1920
+height = 1080
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=859663645]
+
+[node name="Props" type="Node2D" parent="." unique_id=1643627434]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1010387236]
+
+[node name="Regions" type="Node2D" parent="." unique_id=625315241]
+
+[node name="Markers" type="Node2D" parent="." unique_id=985474594]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1624798805]
+
+[node name="GuiMain" type="Control" parent="." unique_id=1996413379]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="GuiMain" unique_id=672322270]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiMain/PanelContainer" unique_id=175146641]
+layout_mode = 2
+theme = ExtResource("2_f080w")
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="GuiMain/PanelContainer/VBoxContainer" unique_id=911669094]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ksv1")
+text = "PLAY"
+
+[node name="QuitButton" type="Button" parent="GuiMain/PanelContainer/VBoxContainer" unique_id=1414918212]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ksv1")
+text = "QUIT"
