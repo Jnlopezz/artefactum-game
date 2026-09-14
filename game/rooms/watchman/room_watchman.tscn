@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ca3ipy4o8gpmh"]
+
+[ext_resource type="Script" uid="uid://4r15vypctt5c" path="res://game/rooms/watchman/room_watchman.gd" id="1_vly7o"]
+[ext_resource type="PackedScene" uid="uid://dr8to6peu211f" path="res://game/characters/watchman_npc/character_watchman_npc.tscn" id="2_65hbv"]
+[ext_resource type="PackedScene" uid="uid://ctc2f0q3wh7n8" path="res://game/mini_game/watchman_minigame.tscn" id="2_pmyl0"]
+
+[node name="RoomWatchman" type="Node2D" unique_id=1689971442]
+script = ExtResource("1_vly7o")
+script_name = "Watchman"
+width = 1920
+height = 1080
+
+[node name="MiniGame" parent="." unique_id=1946901400 instance=ExtResource("2_pmyl0")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1267947523]
+
+[node name="Props" type="Node2D" parent="." unique_id=1470192992]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=780133774]
+
+[node name="Regions" type="Node2D" parent="." unique_id=1471173361]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1378519204]
+
+[node name="Characters" type="Node2D" parent="." unique_id=280445325]
+
+[node name="CharacterWatchmanNpc *" parent="Characters" unique_id=320412786 instance=ExtResource("2_65hbv")]
+position = Vector2(960, 420)
+metadata/EDITOR_TMP_COPY_OF = "WatchmanNpc"

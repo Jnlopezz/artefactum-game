@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dqe6spq5y11tf"]
+
+[ext_resource type="Script" uid="uid://dip5p8tjhkhis" path="res://game/mini_game/click_game/click_game.gd" id="1_ahdrh"]
+[ext_resource type="Theme" uid="uid://b5awa6jrdax3n" path="res://game/themes/main_font_theme.tres" id="1_b46he"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6wnl"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.094629996, 0.22414476, 0.4640171, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_604u3"]
+bg_color = Color(0.36538365, 5.270317e-06, 0.2566163, 1)
+
+[node name="ClickGame" type="CenterContainer" unique_id=951210603]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 0
+theme = ExtResource("1_b46he")
+script = ExtResource("1_ahdrh")
+
+[node name="FightSlider" type="HSlider" parent="." unique_id=1954801867]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1079, 100)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_v6wnl")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_604u3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_v6wnl")
+value = 50.0
+
+[node name="Timer" type="Timer" parent="." unique_id=336139015]
+wait_time = 2.0

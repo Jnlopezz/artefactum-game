@@ -21,6 +21,7 @@ func _on_click() -> void:
 	await C.player.face_clicked()
 	await C.NeighborNpc.say("Hola soy una vecina")
 	await C.NeighborNpc.say("aquì la vecina dice cosas")
+	R.goto_room('Neighbor')
 
 
 # Called when the character is double-clicked

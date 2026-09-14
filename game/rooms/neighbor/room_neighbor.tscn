@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dk1hp1e60wkyw"]
+
+[ext_resource type="Script" uid="uid://cnfti4dnh5l5d" path="res://game/rooms/neighbor/room_neighbor.gd" id="1_to0g1"]
+[ext_resource type="PackedScene" uid="uid://bkgu6f1xu6u5j" path="res://game/characters/neighbor_npc/character_neighbor_npc.tscn" id="2_3ldwy"]
+[ext_resource type="PackedScene" uid="uid://buorugg5ed45d" path="res://game/mini_game/neighbor_mini_game.tscn" id="2_h6d36"]
+
+[node name="RoomNeighbor" type="Node2D" unique_id=1740387240]
+script = ExtResource("1_to0g1")
+script_name = "Neighbor"
+has_player = false
+width = 1920
+height = 1080
+
+[node name="NeighborMiniGame" parent="." unique_id=1946901400 instance=ExtResource("2_h6d36")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=2025242910]
+
+[node name="Props" type="Node2D" parent="." unique_id=632432160]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1644413432]
+
+[node name="Regions" type="Node2D" parent="." unique_id=883127268]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1844893832]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1221310033]
+
+[node name="CharacterNeighborNpc *" parent="Characters" unique_id=1752758048 instance=ExtResource("2_3ldwy")]
+position = Vector2(960, 348)
+metadata/EDITOR_TMP_COPY_OF = "NeighborNpc"

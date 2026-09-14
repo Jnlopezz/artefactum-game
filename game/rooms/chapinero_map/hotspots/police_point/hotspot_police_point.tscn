@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2ftqrbe20f7d"]
+
+[ext_resource type="Script" uid="uid://crimqequvfbwv" path="res://game/rooms/chapinero_map/hotspots/police_point/hotspot_police_point.gd" id="1_76glh"]
+
+[node name="PolicePoint" type="Area2D" unique_id=1686445329]
+script = ExtResource("1_76glh")
+script_name = "PolicePoint"
+description = "Policia"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1556702882]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://boyaq2i427eoi"]
+
+[ext_resource type="Script" path="res://game/rooms/watchman/room_watchman_state.gd" id="1_2fldm"]
+
+[resource]
+resource_name = "Watchman"
+script = ExtResource("1_2fldm")
+script_name = "Watchman"
+scene = "res://game/rooms/watchman/room_watchman.tscn"

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dmwk5ktwrok8w"]
+
+[ext_resource type="Script" uid="uid://cgj4p50adn4iu" path="res://game/rooms/chapinero_map/hotspots/depot_point/hotspot_depot_point.gd" id="1_mrrup"]
+
+[node name="DepotPoint" type="Area2D" unique_id=1030004376]
+script = ExtResource("1_mrrup")
+script_name = "DepotPoint"
+description = "Acopio"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=961397672]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

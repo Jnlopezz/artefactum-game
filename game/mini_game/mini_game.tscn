@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c6tga11bksxuu"]
+
+[ext_resource type="Script" uid="uid://qb5erlfrvqgp" path="res://game/mini_game/mini_game.gd" id="1_op3nm"]
+[ext_resource type="PackedScene" uid="uid://dqe6spq5y11tf" path="res://game/mini_game/click_game/click_game.tscn" id="1_tb8sl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_to0g1"]
+bg_color = Color(0.086926706, 0.29924613, 0.29929972, 1)
+
+[node name="MiniGame" type="Control" unique_id=1946901400]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_op3nm")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1407595187]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_to0g1")
+
+[node name="ClickGame" parent="PanelContainer" unique_id=951210603 instance=ExtResource("1_tb8sl")]
+unique_name_in_owner = true
+layout_mode = 2
