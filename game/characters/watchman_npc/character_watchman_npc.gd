@@ -21,6 +21,7 @@ func _on_click() -> void:
 	await C.player.face_clicked()
 	await C.WatchmanNpc.say("Hola soy un celador")
 	await C.WatchmanNpc.say("aquì el celador dice cosas")
+	R.goto_room('Watchman')
 
 
 # Called when the character is double-clicked

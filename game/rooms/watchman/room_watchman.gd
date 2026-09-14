@@ -3,7 +3,7 @@
 extends PopochiuRoom
 
 const Data := preload('room_watchman_state.gd')
-@onready var watchman_mini_game: MiniGame = $NeighborMiniGame
+@onready var watchman_mini_game: MiniGame = $MiniGame
 
 var state: Data = load("res://game/rooms/watchman/room_watchman.tres")
 

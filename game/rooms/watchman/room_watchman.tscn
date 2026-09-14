@@ -7,6 +7,7 @@
 [node name="RoomWatchman" type="Node2D" unique_id=1689971442]
 script = ExtResource("1_vly7o")
 script_name = "Watchman"
+has_player = false
 width = 1920
 height = 1080
 
