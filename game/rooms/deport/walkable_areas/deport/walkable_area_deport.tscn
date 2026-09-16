@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cobfqvd3iw5d1"]
+
+[ext_resource type="Script" uid="uid://byg2vit2in717" path="res://game/rooms/deport/walkable_areas/deport/walkable_area_deport.gd" id="1_3ht5r"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3ht5r"]
+vertices = PackedVector2Array(1884.9922, 860.28906, 1880.3984, 1084.9063, 69.13281, 1095.2422, 66.11719, 830.71875, 886.8828, 400.41406)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(886.8833, 400.41364, 1884.9954, 860.2891, 1880.4006, 1084.9043, 69.12988, 1095.2417, 66.1178, 830.7222)])
+agent_radius = 0.0
+
+[node name="Deport" type="Node2D" unique_id=532664897]
+script = ExtResource("1_3ht5r")
+script_name = "Deport"
+description = "Deport"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(886.8833, 400.41364, 1884.9954, 860.2891, 1880.4006, 1084.9043, 69.12988, 1095.2417, 66.1178, 830.7222)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=1445529017]
+visible = false
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_3ht5r")

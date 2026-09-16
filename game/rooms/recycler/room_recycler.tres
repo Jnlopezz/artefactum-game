@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://b5ccxhtxh6a81"]
+
+[ext_resource type="Script" path="res://game/rooms/recycler/room_recycler_state.gd" id="1_abj8a"]
+
+[resource]
+resource_name = "Recycler"
+script = ExtResource("1_abj8a")
+script_name = "Recycler"
+scene = "res://game/rooms/recycler/room_recycler.tscn"

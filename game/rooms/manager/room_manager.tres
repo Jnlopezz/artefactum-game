@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bd025x1y6wjmd"]
+
+[ext_resource type="Script" path="res://game/rooms/manager/room_manager_state.gd" id="1_dpr43"]
+
+[resource]
+resource_name = "Manager"
+script = ExtResource("1_dpr43")
+script_name = "Manager"
+scene = "res://game/rooms/manager/room_manager.tscn"

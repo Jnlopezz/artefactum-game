@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://calif66q2ub45"]
+
+[ext_resource type="Script" uid="uid://pslf6yf6ywkh" path="res://game/characters/manager/character_manager.gd" id="1_uhw4h"]
+[ext_resource type="Texture2D" uid="uid://bjunjatl3lbia" path="res://game/characters/manager/assets/Encargado.png" id="2_ttvpj"]
+
+[node name="CharacterManager" type="Area2D" unique_id=897383893]
+script = ExtResource("1_uhw4h")
+obstacle = true
+dialog_pos = Vector2(0.90908813, -315.45453)
+script_name = "Manager"
+description = "Encargado"
+cursor = 8
+interaction_polygon = PackedVector2Array(-83.309235, -258.38675, 96.58484, -257.42255, 85.840485, -5.2469482, -65.084045, -6.7239685)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1155315902]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=163227339]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=772202518]
+position = Vector2(0, -130)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ttvpj")
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=627310211]
+visible = false
+polygon = PackedVector2Array(-83.309235, -258.38675, 96.58484, -257.42255, 85.840485, -5.2469482, -65.084045, -6.7239685)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=584872279]
+visible = false
+vertices = PackedVector2Array(-151.0681, -33.57724, 156.73093, -35.210846, 157.42001, 13.864563, -149.37268, 14.356354)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

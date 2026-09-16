@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bsrrb3ecm7ce7"]
+
+[ext_resource type="Script" uid="uid://c78q26x1fxrrn" path="res://game/rooms/recycler/room_recycler.gd" id="1_c6e1j"]
+[ext_resource type="PackedScene" uid="uid://c6tga11bksxuu" path="res://game/mini_game/mini_game.tscn" id="2_ll6sj"]
+[ext_resource type="PackedScene" uid="uid://dkyhya71rtmul" path="res://game/characters/recycler_npc/character_recycler_npc.tscn" id="3_rdbrn"]
+
+[node name="RoomRecycler" type="Node2D" unique_id=1326342015]
+script = ExtResource("1_c6e1j")
+script_name = "Recycler"
+has_player = false
+width = 1920
+height = 1080
+
+[node name="MiniGame" parent="." unique_id=1946901400 instance=ExtResource("2_ll6sj")]
+enemy_force = 2.0
+player_force = 2.0
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=781561786]
+
+[node name="Props" type="Node2D" parent="." unique_id=1271920834]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=2132050098]
+
+[node name="Regions" type="Node2D" parent="." unique_id=2004914522]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1291756854]
+
+[node name="Characters" type="Node2D" parent="." unique_id=494453786]
+
+[node name="CharacterRecyclerNpc *" parent="Characters" unique_id=2099425086 instance=ExtResource("3_rdbrn")]
+position = Vector2(960, 396)
+metadata/EDITOR_TMP_COPY_OF = "RecyclerNpc"

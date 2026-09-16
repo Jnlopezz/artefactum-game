@@ -181,26 +181,26 @@ metadata/EDITOR_TMP_COPY_OF = "PlayerMain"
 
 [node name="CharacterNeighborNpc *" parent="Characters" unique_id=1752758048 instance=ExtResource("17_m3ody")]
 position = Vector2(-1042, 887)
-walk_to_point = Vector2(22.539429, 17.280273)
-look_at_point = Vector2(2.2539368, -107.43799)
+walk_to_point = Vector2(-184.56787, -2.8215332)
+look_at_point = Vector2(-0.16601563, -119.537964)
 metadata/EDITOR_TMP_COPY_OF = "NeighborNpc"
 
 [node name="CharacterWatchmanNpc *" parent="Characters" unique_id=320412786 instance=ExtResource("18_mm6u3")]
 position = Vector2(-504, 710)
-walk_to_point = Vector2(17.600037, 19.799927)
-look_at_point = Vector2(3.3000488, -116.60004)
+walk_to_point = Vector2(128.80994, 73.38953)
+look_at_point = Vector2(-5.1699524, -144.43005)
 metadata/EDITOR_TMP_COPY_OF = "WatchmanNpc"
 
 [node name="CharacterRecyclerNpc *" parent="Characters" unique_id=2099425086 instance=ExtResource("19_yocy7")]
 position = Vector2(317, 879)
-walk_to_point = Vector2(9.679993, 25.409973)
-look_at_point = Vector2(-1.2099609, -104.06006)
+walk_to_point = Vector2(-159.7085, -4.8638306)
+look_at_point = Vector2(2.419983, -142.78015)
 metadata/EDITOR_TMP_COPY_OF = "RecyclerNpc"
 
 [node name="CharacterBuddyNpc *" parent="Characters" unique_id=2025185892 instance=ExtResource("20_akgkh")]
 position = Vector2(630, 816)
-walk_to_point = Vector2(10.629395, 35.431213)
-look_at_point = Vector2(3.5430908, -99.2074)
+walk_to_point = Vector2(-174.65216, -1.6578369)
+look_at_point = Vector2(-0.08691406, -159.7074)
 metadata/EDITOR_TMP_COPY_OF = "BuddyNpc"
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1377913073]
@@ -215,7 +215,7 @@ visible = false
 [node name="DepotPoint" parent="Hotspots" unique_id=1030004376 instance=ExtResource("22_ggg5p")]
 position = Vector2(2690, 710)
 baseline = 68
-walk_to_point = Vector2(17.009277, 89.26428)
+walk_to_point = Vector2(-60.939453, 110.52295)
 look_at_point = Vector2(5.430176, -14.099548)
 interaction_polygon = PackedVector2Array(-63.82895, -74.09212, 73.065796, -73.578964, 71.01315, 67.42107, -60.750015, 69.47371)
 

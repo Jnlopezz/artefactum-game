@@ -19,8 +19,9 @@ func _on_room_set() -> void:
 func _on_click() -> void:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
-	await C.RecyclerNpc.say("Hola soy un samaritano")
-	await C.RecyclerNpc.say("aquì el samaritano dice cosas")
+	await C.BuddyNpc.say("Hola soy un samaritano")
+	await C.BuddyNpc.say("aquì el samaritano dice cosas")
+	R.goto_room('Buddy')
 
 
 # Called when the character is double-clicked

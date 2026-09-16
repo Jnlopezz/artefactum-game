@@ -3,13 +3,5 @@
 [ext_resource type="PackedScene" uid="uid://c6tga11bksxuu" path="res://game/mini_game/mini_game.tscn" id="1_nrg0b"]
 [ext_resource type="Script" uid="uid://cg357l4cxc37m" path="res://game/mini_game/neighbor_mini_game.gd" id="2_v6wnl"]
 
-[sub_resource type="Curve" id="Curve_v6wnl"]
-_limits = [0.0, 100.0, 0.0, 100.0]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(25, 25), -0.4121223, -0.4121223, 0, 0, Vector2(50, 50), 2.6211758, 2.6211758, 0, 0, Vector2(75, 75), -0.3334816, -0.3334816, 0, 0, Vector2(100, 100), 0.0, 0.0, 0, 0]
-point_count = 5
-
 [node name="NeighborMiniGame" unique_id=1946901400 instance=ExtResource("1_nrg0b")]
 script = ExtResource("2_v6wnl")
-
-[node name="ClickGame" parent="PanelContainer" parent_id_path=PackedInt32Array(1407595187) index="0" unique_id=951210603]
-curve = SubResource("Curve_v6wnl")

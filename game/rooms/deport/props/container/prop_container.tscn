@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bbw5hlxv53gaj"]
+
+[ext_resource type="Script" uid="uid://j2ec0qt78v31" path="res://game/rooms/deport/props/container/prop_container.gd" id="1_7nbo7"]
+[ext_resource type="Texture2D" uid="uid://sm2nddn4x0lh" path="res://game/rooms/deport/assets/container.png" id="2_ug8sk"]
+
+[node name="Container" type="Area2D" unique_id=1089156565]
+script = ExtResource("1_7nbo7")
+texture = ExtResource("2_ug8sk")
+script_name = "Container"
+description = "Contenedor"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1278709718]
+texture_filter = 1
+texture = ExtResource("2_ug8sk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=974486067]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=479408424]
+visible = false
+modulate = Color(1, 1, 0, 1)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1568753936]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

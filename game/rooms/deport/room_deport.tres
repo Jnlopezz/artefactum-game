@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://drlpwlafvg4ac"]
+
+[ext_resource type="Script" path="res://game/rooms/deport/room_deport_state.gd" id="1_jo8ki"]
+
+[resource]
+resource_name = "Deport"
+script = ExtResource("1_jo8ki")
+script_name = "Deport"
+scene = "res://game/rooms/deport/room_deport.tscn"

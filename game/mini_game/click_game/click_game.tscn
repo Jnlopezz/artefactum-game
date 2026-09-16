@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dqe6spq5y11tf"]
 
-[ext_resource type="Script" uid="uid://dip5p8tjhkhis" path="res://game/mini_game/click_game/click_game.gd" id="1_ahdrh"]
 [ext_resource type="Theme" uid="uid://b5awa6jrdax3n" path="res://game/themes/main_font_theme.tres" id="1_b46he"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6wnl"]
@@ -22,7 +21,6 @@ grow_vertical = 2
 size_flags_vertical = 3
 mouse_filter = 0
 theme = ExtResource("1_b46he")
-script = ExtResource("1_ahdrh")
 
 [node name="FightSlider" type="HSlider" parent="." unique_id=1954801867]
 unique_name_in_owner = true

@@ -2,7 +2,12 @@
 
 [ext_resource type="Script" uid="uid://4r15vypctt5c" path="res://game/rooms/watchman/room_watchman.gd" id="1_vly7o"]
 [ext_resource type="PackedScene" uid="uid://dr8to6peu211f" path="res://game/characters/watchman_npc/character_watchman_npc.tscn" id="2_65hbv"]
-[ext_resource type="PackedScene" uid="uid://ctc2f0q3wh7n8" path="res://game/mini_game/watchman_minigame.tscn" id="2_pmyl0"]
+[ext_resource type="PackedScene" uid="uid://ctc2f0q3wh7n8" path="res://game/mini_game/watchman_mini_game.tscn" id="2_pmyl0"]
+
+[sub_resource type="Curve" id="Curve_pmyl0"]
+_limits = [0.0, 100.0, 0.0, 100.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(25, 25), -1.033107, -1.033107, 0, 0, Vector2(50, 50), 0.0, 0.0, 0, 0, Vector2(75, 75), 3.3762794, 3.3762794, 0, 0, Vector2(100, 100), 0.0, 0.0, 0, 0]
+point_count = 5
 
 [node name="RoomWatchman" type="Node2D" unique_id=1689971442]
 script = ExtResource("1_vly7o")
@@ -14,6 +19,9 @@ height = 1080
 [node name="MiniGame" parent="." unique_id=1946901400 instance=ExtResource("2_pmyl0")]
 offset_right = 1920.0
 offset_bottom = 1080.0
+enemy_force = 2.0
+player_force = 2.0
+curve = SubResource("Curve_pmyl0")
 
 [node name="WalkableAreas" type="Node2D" parent="." unique_id=1267947523]
 

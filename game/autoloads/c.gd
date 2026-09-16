@@ -7,6 +7,7 @@ const PCNeighborNpc := preload("res://game/characters/neighbor_npc/character_nei
 const PCWatchmanNpc := preload("res://game/characters/watchman_npc/character_watchman_npc.gd")
 const PCRecyclerNpc := preload("res://game/characters/recycler_npc/character_recycler_npc.gd")
 const PCBuddyNpc := preload("res://game/characters/buddy_npc/character_buddy_npc.gd")
+const PCManager := preload("res://game/characters/manager/character_manager.gd")
 # ---- classes
 
 # nodes ----
@@ -15,6 +16,7 @@ var NeighborNpc: PCNeighborNpc : get = get_NeighborNpc
 var WatchmanNpc: PCWatchmanNpc : get = get_WatchmanNpc
 var RecyclerNpc: PCRecyclerNpc : get = get_RecyclerNpc
 var BuddyNpc: PCBuddyNpc : get = get_BuddyNpc
+var Manager: PCManager : get = get_Manager
 # ---- nodes
 
 # functions ----
@@ -23,5 +25,6 @@ func get_NeighborNpc() -> PCNeighborNpc: return get_runtime_character("NeighborN
 func get_WatchmanNpc() -> PCWatchmanNpc: return get_runtime_character("WatchmanNpc")
 func get_RecyclerNpc() -> PCRecyclerNpc: return get_runtime_character("RecyclerNpc")
 func get_BuddyNpc() -> PCBuddyNpc: return get_runtime_character("BuddyNpc")
+func get_Manager() -> PCManager: return get_runtime_character("Manager")
 # ---- functions
 

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cv514nkpwuidv"]
+
+[ext_resource type="Script" uid="uid://diqdpgvvn62nl" path="res://game/rooms/deport/props/door/prop_door.gd" id="1_hhq6p"]
+[ext_resource type="Texture2D" uid="uid://br16ds7gtxdxl" path="res://game/rooms/deport/props/door/assets/door.png" id="2_8nl62"]
+
+[node name="Door" type="Area2D" unique_id=1669741560]
+script = ExtResource("1_hhq6p")
+script_name = "Door"
+description = "Door"
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2117751635]
+texture_filter = 1
+position = Vector2(0, -195)
+texture = ExtResource("2_8nl62")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=420106550]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1584989178]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=315067547]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

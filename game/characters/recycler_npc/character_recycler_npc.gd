@@ -21,6 +21,7 @@ func _on_click() -> void:
 	await C.player.face_clicked()
 	await C.RecyclerNpc.say("Hola soy un reciclador")
 	await C.RecyclerNpc.say("aquì el reciclador dice cosas")
+	R.goto_room('Recycler')
 
 
 # Called when the character is double-clicked

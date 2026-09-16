@@ -4,7 +4,7 @@ extends PopochiuRoom
 
 const Data := preload('room_neighbor_state.gd')
 
-@onready var neighbor_mini_game: MiniGame = $NeighborMiniGame
+@onready var mini_game: MiniGame = $MiniGame
 
 var state: Data = load("res://game/rooms/neighbor/room_neighbor.tres")
 
@@ -22,8 +22,8 @@ func _on_room_entered() -> void:
 # Implement this to start cutscenes, play sounds, etc.
 func _on_room_transition_finished() -> void:
 	await C.NeighborNpc.say("Debes hacer click para jugar")
-	neighbor_mini_game._start_mini_game()
-	neighbor_mini_game.game_ended.connect(on_game_ended)
+	mini_game._start_mini_game()
+	mini_game.game_ended.connect(on_game_ended)
 
 
 # Called before Popochiu unloads the room.

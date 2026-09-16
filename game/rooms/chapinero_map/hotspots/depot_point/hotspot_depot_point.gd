@@ -10,6 +10,7 @@ extends PopochiuHotspot
 func _on_click() -> void:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
+	R.goto_room('Deport')
 
 
 # Called when the hotspot is double-clicked

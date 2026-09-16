@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://ctc2f0q3wh7n8"]
 
 [ext_resource type="PackedScene" uid="uid://c6tga11bksxuu" path="res://game/mini_game/mini_game.tscn" id="1_ol5sm"]
-[ext_resource type="Script" uid="uid://c6yij7csqvsf3" path="res://game/mini_game/watchman_minigame.gd" id="2_q8ypn"]
+[ext_resource type="Script" uid="uid://c6yij7csqvsf3" path="res://game/mini_game/watchman_mini_game.gd" id="2_q8ypn"]
 
 [node name="MiniGame" unique_id=1946901400 instance=ExtResource("1_ol5sm")]
 script = ExtResource("2_q8ypn")
+
+[node name="PanelContainer" parent="." index="0" unique_id=1407595187]
+mouse_filter = 2

@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://vrpdkg83dcmp"]
 
 [ext_resource type="Script" uid="uid://da4n241dgoxt5" path="res://game/characters/buddy_npc/character_buddy_npc.gd" id="1_ado1i"]
-[ext_resource type="Texture2D" uid="uid://c6sopfsus47ic" path="res://game/characters/buddy_npc/assets/buddy.png" id="2_wgyhv"]
+[ext_resource type="Texture2D" uid="uid://dcn4l2vyfwnvq" path="res://game/characters/buddy_npc/assets/buddy.png" id="2_wgyhv"]
 
 [node name="CharacterBuddyNpc" type="Area2D" unique_id=2025185892]
 script = ExtResource("1_ado1i")
-dialog_pos = Vector2(0.826416, -211.57024)
+obstacle = true
+dialog_pos = Vector2(-2.47937, -288.42975)
 script_name = "BuddyNpc"
 description = "Samaritano"
 cursor = 8
-interaction_polygon = PackedVector2Array(-47.787125, -186.80624, 49.186615, -188.20575, 48.2536, -3.06221, -47.787125, -5.861252)
+interaction_polygon = PackedVector2Array(64.06262, -258.45367, 66.435425, -3.0621948, -56.051636, -7.5141296, -59.513916, -256.57996)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=452412913]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
@@ -17,16 +18,16 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=480440794]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=800942472]
-position = Vector2(0, -96)
+position = Vector2(0, -128)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_wgyhv")
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1057159018]
 visible = false
-polygon = PackedVector2Array(-47.787125, -186.80624, 49.186615, -188.20575, 48.2536, -3.06221, -47.787125, -5.861252)
+polygon = PackedVector2Array(64.06262, -258.45367, 66.435425, -3.0621948, -56.051636, -7.5141296, -59.513916, -256.57996)
 
 [node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1350531773]
 visible = false
-vertices = PackedVector2Array(-50.8248, -189.0462, 52.690796, -190.98691, 51.1131, -0.5, -51.74675, -2.1990662)
+vertices = PackedVector2Array(-133.46939, -35.32724, 126.24451, -35.61499, 127.14618, 29.252045, -132.7385, 30.032349)
 affect_navigation_mesh = true
 carve_navigation_mesh = true

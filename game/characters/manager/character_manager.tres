@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dk0cdcrppn3a7"]
+
+[ext_resource type="Script" path="res://game/characters/manager/character_manager_state.gd" id="1_ngft5"]
+
+[resource]
+resource_name = "Manager"
+script = ExtResource("1_ngft5")
+script_name = "Manager"
+scene = "res://game/characters/manager/character_manager.tscn"

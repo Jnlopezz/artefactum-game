@@ -3,7 +3,7 @@
 extends PopochiuRoom
 
 const Data := preload('room_watchman_state.gd')
-@onready var watchman_mini_game: MiniGame = $MiniGame
+@onready var mini_game: MiniGame = $MiniGame
 
 var state: Data = load("res://game/rooms/watchman/room_watchman.tres")
 
@@ -21,8 +21,8 @@ func _on_room_entered() -> void:
 # Implement this to start cutscenes, play sounds, etc.
 func _on_room_transition_finished() -> void:
 	await C.WatchmanNpc.say("Debes hacer click para jugar")
-	watchman_mini_game._start_mini_game()
-	watchman_mini_game.game_ended.connect(on_game_ended)
+	mini_game._start_mini_game()
+	mini_game.game_ended.connect(on_game_ended)
 
 
 # Called before Popochiu unloads the room.

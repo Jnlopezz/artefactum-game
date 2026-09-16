@@ -1,10 +1,25 @@
 [gd_scene format=3 uid="uid://c6tga11bksxuu"]
 
 [ext_resource type="Script" uid="uid://qb5erlfrvqgp" path="res://game/mini_game/mini_game.gd" id="1_op3nm"]
-[ext_resource type="PackedScene" uid="uid://dqe6spq5y11tf" path="res://game/mini_game/click_game/click_game.tscn" id="1_tb8sl"]
+[ext_resource type="Theme" uid="uid://b5awa6jrdax3n" path="res://game/themes/main_font_theme.tres" id="2_64c4s"]
+
+[sub_resource type="Curve" id="Curve_64c4s"]
+_limits = [0.0, 100.0, 0.0, 100.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(25, 25), 0.0, 0.0, 0, 0, Vector2(50, 50), 0.0, 0.0, 0, 0, Vector2(75, 75), 0.0, 0.0, 0, 0, Vector2(100, 100), 0.0, 0.0, 0, 0]
+point_count = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_to0g1"]
 bg_color = Color(0.086926706, 0.29924613, 0.29929972, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6wnl"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.094629996, 0.22414476, 0.4640171, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_604u3"]
+bg_color = Color(0.36538365, 5.270317e-06, 0.2566163, 1)
 
 [node name="MiniGame" type="Control" unique_id=1946901400]
 custom_minimum_size = Vector2(1920, 1080)
@@ -13,6 +28,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_op3nm")
+curve = SubResource("Curve_64c4s")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1407595187]
 layout_mode = 1
@@ -21,8 +37,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_to0g1")
 
-[node name="ClickGame" parent="PanelContainer" unique_id=951210603 instance=ExtResource("1_tb8sl")]
+[node name="ClickGame" type="CenterContainer" parent="PanelContainer" unique_id=951210603]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("2_64c4s")
+
+[node name="FightSlider" type="HSlider" parent="PanelContainer/ClickGame" unique_id=1954801867]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1079, 100)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_v6wnl")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_604u3")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_v6wnl")
+value = 50.0

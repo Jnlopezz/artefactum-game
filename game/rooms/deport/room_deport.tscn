@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bveq1vo2o78o0"]
+
+[ext_resource type="Script" uid="uid://djyo8f3ay5d6d" path="res://game/rooms/deport/room_deport.gd" id="1_2ilyt"]
+[ext_resource type="Texture2D" uid="uid://brudfbq5w5mml" path="res://game/rooms/deport/assets/backaground.png" id="2_wi8o2"]
+[ext_resource type="PackedScene" uid="uid://cobfqvd3iw5d1" path="res://game/rooms/deport/walkable_areas/deport/walkable_area_deport.tscn" id="3_6solf"]
+[ext_resource type="PackedScene" uid="uid://bbw5hlxv53gaj" path="res://game/rooms/deport/props/container/prop_container.tscn" id="3_wo52h"]
+[ext_resource type="PackedScene" uid="uid://5b3jl36i4itu" path="res://game/characters/player_main/character_player_main.tscn" id="4_ufntg"]
+[ext_resource type="PackedScene" uid="uid://cv514nkpwuidv" path="res://game/rooms/deport/props/door/prop_door.tscn" id="5_ajdep"]
+[ext_resource type="PackedScene" uid="uid://calif66q2ub45" path="res://game/characters/manager/character_manager.tscn" id="6_f5l25"]
+
+[node name="RoomDeport" type="Node2D" unique_id=95460976]
+script = ExtResource("1_2ilyt")
+script_name = "Deport"
+width = 1920
+height = 1080
+
+[node name="Background" type="Node2D" parent="." unique_id=1823411539]
+
+[node name="Backaground" type="Sprite2D" parent="Background" unique_id=94959688]
+position = Vector2(960, 540)
+texture = ExtResource("2_wi8o2")
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=294351323]
+
+[node name="Deport" parent="WalkableAreas" unique_id=532664897 instance=ExtResource("3_6solf")]
+
+[node name="Props" type="Node2D" parent="." unique_id=1962457721]
+
+[node name="Container" parent="Props" unique_id=1089156565 instance=ExtResource("3_wo52h")]
+position = Vector2(960, 540)
+obstacle = true
+obstacle_polygon = [Vector2(10.08313, -25.317383), Vector2(317.94568, 147.92645), Vector2(-33.37732, 345.4798), Vector2(-349.68573, 169.88953)]
+baseline = 158
+walk_to_point = Vector2(-342.37415, 256.78052)
+look_at_point = Vector2(-81.443726, -21.009277)
+interaction_polygon = PackedVector2Array(56.380493, -304.3856, 396.34558, -108.67587, 264.3004, 158.19281, -40.29541, 306.74353, -230.73969, 198.87988, -400.5119, 36.181458, -343.92114, -67.5683)
+
+[node name="Door" parent="Props" unique_id=1669741560 instance=ExtResource("5_ajdep")]
+position = Vector2(256, 654)
+obstacle_polygon = [Vector2(-16, -16), Vector2(17.25, -16.078949), Vector2(16, 16), Vector2(-16, 16)]
+description = "Salir"
+walk_to_point = Vector2(91.53845, -1.6409302)
+look_at_point = Vector2(0, -220)
+interaction_polygon = PackedVector2Array(-102.22821, -346.73846, 92.193726, -438.12775, 99.887146, -65.16925, -99.88718, 63.446106)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1660530991]
+
+[node name="Regions" type="Node2D" parent="." unique_id=312820248]
+
+[node name="Markers" type="Node2D" parent="." unique_id=241973535]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1868569966]
+
+[node name="CharacterPlayerMain *" parent="Characters" unique_id=1659260067 instance=ExtResource("4_ufntg")]
+position = Vector2(270, 967)
+metadata/EDITOR_TMP_COPY_OF = "PlayerMain"
+
+[node name="CharacterManager *" parent="Characters" unique_id=897383893 instance=ExtResource("6_f5l25")]
+position = Vector2(1585, 835)
+walk_to_point = Vector2(-162.38208, 37.268005)
+look_at_point = Vector2(-2.6619873, -161.05103)
+metadata/EDITOR_TMP_COPY_OF = "Manager"

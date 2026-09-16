@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bhbpr5i4vqa7p"]
+
+[ext_resource type="Script" uid="uid://dnbjlo6h0psrc" path="res://game/rooms/buddy/room_buddy.gd" id="1_njchn"]
+[ext_resource type="PackedScene" uid="uid://c6tga11bksxuu" path="res://game/mini_game/mini_game.tscn" id="2_d36tm"]
+[ext_resource type="PackedScene" uid="uid://vrpdkg83dcmp" path="res://game/characters/buddy_npc/character_buddy_npc.tscn" id="2_m3y3d"]
+
+[node name="RoomBuddy" type="Node2D" unique_id=561292670]
+script = ExtResource("1_njchn")
+script_name = "Buddy"
+has_player = false
+width = 1920
+height = 1080
+
+[node name="MiniGame" parent="." unique_id=1946901400 instance=ExtResource("2_d36tm")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+enemy_force = 2.0
+player_force = 2.0
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=548830712]
+
+[node name="Props" type="Node2D" parent="." unique_id=1385237981]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=2058260245]
+
+[node name="Regions" type="Node2D" parent="." unique_id=757166975]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1790036147]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1653337101]
+
+[node name="CharacterBuddyNpc *" parent="Characters" unique_id=2025185892 instance=ExtResource("2_m3y3d")]
+position = Vector2(960, 412)
+metadata/EDITOR_TMP_COPY_OF = "BuddyNpc"

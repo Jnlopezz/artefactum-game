@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ds5y0loild6mn"]
+
+[ext_resource type="Script" uid="uid://btyclmeqtagc5" path="res://game/rooms/manager/room_manager.gd" id="1_sg4s2"]
+[ext_resource type="PackedScene" uid="uid://csugvifcr0m4g" path="res://game/mini_game/manager_mini_game.tscn" id="2_0aos7"]
+[ext_resource type="PackedScene" uid="uid://calif66q2ub45" path="res://game/characters/manager/character_manager.tscn" id="3_e3k0v"]
+
+[node name="RoomManager" type="Node2D" unique_id=185130410]
+script = ExtResource("1_sg4s2")
+script_name = "Manager"
+has_player = false
+width = 1920
+height = 1080
+
+[node name="MiniGame" parent="." unique_id=1946901400 instance=ExtResource("2_0aos7")]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=870081788]
+
+[node name="Props" type="Node2D" parent="." unique_id=902564582]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=400138730]
+
+[node name="Regions" type="Node2D" parent="." unique_id=122325728]
+
+[node name="Markers" type="Node2D" parent="." unique_id=105800570]
+
+[node name="Characters" type="Node2D" parent="." unique_id=465942961]
+
+[node name="CharacterManager *" parent="Characters" unique_id=897383893 instance=ExtResource("3_e3k0v")]
+position = Vector2(960, 460)
+metadata/EDITOR_TMP_COPY_OF = "Manager"
