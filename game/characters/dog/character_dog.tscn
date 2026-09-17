@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://be8fs5g2op0gd"]
+
+[ext_resource type="Script" uid="uid://bpp1mtcf1fuar" path="res://game/characters/dog/character_dog.gd" id="1_vdfww"]
+[ext_resource type="Texture2D" uid="uid://b1n868r8cckhr" path="res://game/characters/dog/assets/perro.png" id="2_srdty"]
+
+[node name="CharacterDog" type="Area2D" unique_id=1789034311]
+script = ExtResource("1_vdfww")
+obstacle = true
+script_name = "Dog"
+description = "Perro"
+cursor = 8
+interaction_polygon = PackedVector2Array(-100.92819, 15.597305, 109, 33, 60, 200, -88, 199)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1558999733]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1190163300]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=246773635]
+position = Vector2(0, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_srdty")
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=189114714]
+visible = false
+polygon = PackedVector2Array(-100.92819, 15.597305, 109, 33, 60, 200, -88, 199)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=39572930]
+visible = false
+vertices = PackedVector2Array(-172, 133, 158, 141, 157, 209, -171, 204)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

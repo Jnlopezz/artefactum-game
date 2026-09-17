@@ -173,7 +173,7 @@ texture = ExtResource("15_o8gjh")
 [node name="Characters" type="Node2D" parent="." unique_id=1988778923]
 
 [node name="CharacterPlayerMain *" parent="Characters" unique_id=1659260067 instance=ExtResource("2_lagte")]
-position = Vector2(-1657, 789)
+position = Vector2(-1706, 846)
 baseline = 4
 walk_to_point = Vector2(6.147217, 23.905518)
 look_at_point = Vector2(4.2871094, -75.025635)
@@ -221,9 +221,10 @@ interaction_polygon = PackedVector2Array(-63.82895, -74.09212, 73.065796, -73.57
 
 [node name="PolicePoint" parent="Hotspots" unique_id=1686445329 instance=ExtResource("23_r0da7")]
 position = Vector2(3509, 697)
+description = "CAI"
 baseline = 82
-walk_to_point = Vector2(-1.5185547, 93.09265)
-look_at_point = Vector2(-0.52490234, -20.367737)
+walk_to_point = Vector2(-70.73047, 113.05762)
+look_at_point = Vector2(0.80615234, -11.050781)
 interaction_polygon = PackedVector2Array(-68.96054, -71.013176, 62.28943, -70.50002, 62.28946, 72.03949, -69.23738, 72.066505)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1694423183]

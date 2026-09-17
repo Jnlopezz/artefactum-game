@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://d20lrxlpyhwlw"]
+
+[ext_resource type="Script" uid="uid://cujxfajcfj7l7" path="res://game/rooms/police_station/room_police_station.gd" id="1_57iya"]
+[ext_resource type="Texture2D" uid="uid://ckcfxux0v4cpt" path="res://game/rooms/police_station/assets/backaground.png" id="2_lw1gr"]
+[ext_resource type="PackedScene" uid="uid://bev1k246r21mf" path="res://game/rooms/police_station/walkable_areas/police_floor/walkable_area_police_floor.tscn" id="3_7e2sg"]
+[ext_resource type="PackedScene" uid="uid://40h68tpas6lp" path="res://game/rooms/police_station/props/door_station/prop_door_station.tscn" id="3_pukhv"]
+[ext_resource type="Texture2D" uid="uid://d0k4r8l4n8xug" path="res://game/rooms/police_station/props/door_station/assets/door.png" id="4_jefh0"]
+[ext_resource type="PackedScene" uid="uid://miisqfkac5ld" path="res://game/rooms/police_station/props/cage/prop_cage.tscn" id="5_3d5xw"]
+[ext_resource type="PackedScene" uid="uid://5b3jl36i4itu" path="res://game/characters/player_main/character_player_main.tscn" id="5_46yj3"]
+[ext_resource type="PackedScene" uid="uid://bsd006kg5mm3d" path="res://game/rooms/police_station/props/cage_back/prop_cage_back.tscn" id="7_g6pjb"]
+[ext_resource type="Texture2D" uid="uid://cv3cduhi1eg04" path="res://game/rooms/police_station/props/cage_back/assets/cage_back.png" id="7_hhtuy"]
+[ext_resource type="PackedScene" uid="uid://d3cnmbx3nq7y0" path="res://game/characters/daughter/character_daughter.tscn" id="9_g6pjb"]
+[ext_resource type="PackedScene" uid="uid://be8fs5g2op0gd" path="res://game/characters/dog/character_dog.tscn" id="11_rsq5y"]
+[ext_resource type="PackedScene" uid="uid://m0bd6ny4ig54" path="res://game/characters/policeman/character_policeman.tscn" id="12_2mcxw"]
+
+[node name="RoomPoliceStation" type="Node2D" unique_id=686011088]
+script = ExtResource("1_57iya")
+script_name = "PoliceStation"
+width = 1920
+height = 1080
+
+[node name="Background" type="Node2D" parent="." unique_id=1726919186]
+
+[node name="Backaground" type="Sprite2D" parent="Background" unique_id=1846168608]
+position = Vector2(960, 540)
+texture = ExtResource("2_lw1gr")
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=385972143]
+
+[node name="PoliceFloor" parent="WalkableAreas" unique_id=712632822 instance=ExtResource("3_7e2sg")]
+
+[node name="Props" type="Node2D" parent="." unique_id=81002868]
+
+[node name="DoorStation" parent="Props" unique_id=671016862 instance=ExtResource("3_pukhv")]
+position = Vector2(288, 444)
+texture = ExtResource("4_jefh0")
+obstacle_polygon = [Vector2(-130.4, 241.40001), Vector2(128.19998, 91.8), Vector2(154.59998, 135.90001), Vector2(-105.100006, 287.7)]
+description = "Salir"
+baseline = 134
+walk_to_point = Vector2(110.52399, 191.86462)
+look_at_point = Vector2(8.692902, 43.464478)
+interaction_polygon = PackedVector2Array(-102.75003, -145.1, 105.16998, -256.41998, 100.17078, 135.56332, -98.308044, 250.43375)
+
+[node name="CageBack" parent="Props" unique_id=1565500511 instance=ExtResource("7_g6pjb")]
+position = Vector2(1064, 300)
+texture = ExtResource("7_hhtuy")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+baseline = 202
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Cage" parent="Props" unique_id=1721318105 instance=ExtResource("5_3d5xw")]
+position = Vector2(1066, 524)
+obstacle_polygon = [Vector2(-107.53479, -184.09995), Vector2(389.22546, 65.715), Vector2(87.47363, 316.7899), Vector2(-408.07642, 22.13681)]
+baseline = -2
+walk_to_point = Vector2(-304.7085, 299.3938)
+look_at_point = Vector2(-1.7714844, 5.195984)
+interaction_polygon = PackedVector2Array(-329.35803, -437.03387, -178.58691, -346.24084, -184.37427, 90.41547, -319.92627, -1.3917542)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1363816563]
+
+[node name="Regions" type="Node2D" parent="." unique_id=1910737389]
+
+[node name="Markers" type="Node2D" parent="." unique_id=227659641]
+
+[node name="Characters" type="Node2D" parent="." unique_id=393673603]
+
+[node name="CharacterPlayerMain *" parent="Characters" unique_id=1659260067 instance=ExtResource("5_46yj3")]
+position = Vector2(375, 691)
+metadata/EDITOR_TMP_COPY_OF = "PlayerMain"
+
+[node name="CharacterDog *" parent="Characters" unique_id=1789034311 instance=ExtResource("11_rsq5y")]
+position = Vector2(1160, 494)
+baseline = 63
+metadata/EDITOR_TMP_COPY_OF = "Dog"
+
+[node name="CharacterDaughter *" parent="Characters" unique_id=898879140 instance=ExtResource("9_g6pjb")]
+position = Vector2(978, 337)
+baseline = 39
+walk_to_point = Vector2(-165.05627, 84.88623)
+look_at_point = Vector2(4.7159424, -101.39172)
+metadata/EDITOR_TMP_COPY_OF = "Daughter"
+
+[node name="CharacterPoliceman *" parent="Characters" unique_id=720446352 instance=ExtResource("12_2mcxw")]
+position = Vector2(1557, 844)
+walk_to_point = Vector2(-267, 24)
+look_at_point = Vector2(-2, -162)
+metadata/EDITOR_TMP_COPY_OF = "Policeman"

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://d3cnmbx3nq7y0"]
+
+[ext_resource type="Script" uid="uid://brm2pcvnfsbgc" path="res://game/characters/daughter/character_daughter.gd" id="1_0n5tq"]
+[ext_resource type="Texture2D" uid="uid://c5ery6l1mnu3x" path="res://game/characters/daughter/assets/daughther.png" id="2_737l2"]
+
+[node name="CharacterDaughter" type="Area2D" unique_id=898879140]
+script = ExtResource("1_0n5tq")
+flips_when = 1
+obstacle = true
+dialog_pos = Vector2(0.034973145, -227.19829)
+script_name = "Daughter"
+description = "Hija"
+cursor = 8
+interaction_polygon = PackedVector2Array(-59.430054, 57.013245, 67.1582, 75.319305, 51.331116, 278.464, -40.655945, 279.14697)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1236872784]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1335433127]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1536062449]
+position = Vector2(0, 149)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_737l2")
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1874639337]
+visible = false
+polygon = PackedVector2Array(-59.430054, 57.013245, 67.1582, 75.319305, 51.331116, 278.464, -40.655945, 279.14697)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1301526786]
+visible = false
+vertices = PackedVector2Array(-187.96964, 247.99493, 176.8648, 249.88794, 177.54779, 307.61, -188.49661, 310.18604)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

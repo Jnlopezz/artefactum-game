@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bev1k246r21mf"]
+
+[ext_resource type="Script" uid="uid://d2ot8o8i7mube" path="res://game/rooms/police_station/walkable_areas/police_floor/walkable_area_police_floor.gd" id="1_7grgi"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_7grgi"]
+vertices = PackedVector2Array(917.8125, 319.40625, 920.40625, 536.53125, -920.40625, 539.125, -928.1875, 285.6875, -88.11719, -208.07813)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-928.18506, 285.6867, -88.1156, -208.0752, 917.81006, 319.4054, 920.4038, 536.52985, -920.4039, 539.1236)])
+agent_radius = 0.0
+
+[node name="PoliceFloor" type="Node2D" unique_id=712632822]
+position = Vector2(960, 540)
+script = ExtResource("1_7grgi")
+script_name = "PoliceFloor"
+description = "Police Floor"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-928.18506, 285.6867, -88.1156, -208.0752, 917.81006, 319.4054, 920.4038, 536.52985, -920.4039, 539.1236)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=153654020]
+visible = false
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_7grgi")

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://byckfwa51wf2y"]
+
+[ext_resource type="Script" uid="uid://b38rabppm5q7" path="res://game/rooms/policeman/room_policeman.gd" id="1_uycao"]
+[ext_resource type="PackedScene" uid="uid://bc5mmx2to6x6r" path="res://game/mini_game/policeman_mini_game.tscn" id="2_p4p50"]
+[ext_resource type="PackedScene" uid="uid://m0bd6ny4ig54" path="res://game/characters/policeman/character_policeman.tscn" id="3_eaupb"]
+
+[node name="RoomPoliceman" type="Node2D" unique_id=2068251381]
+script = ExtResource("1_uycao")
+script_name = "Policeman"
+has_player = false
+width = 1920
+height = 1080
+
+[node name="MiniGame" parent="." unique_id=1946901400 instance=ExtResource("2_p4p50")]
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1022211434]
+
+[node name="Props" type="Node2D" parent="." unique_id=791503710]
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=624102619]
+
+[node name="Regions" type="Node2D" parent="." unique_id=993356242]
+
+[node name="Markers" type="Node2D" parent="." unique_id=739121415]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1873928752]
+
+[node name="CharacterPoliceman *" parent="Characters" unique_id=720446352 instance=ExtResource("3_eaupb")]
+position = Vector2(960, 450)
+metadata/EDITOR_TMP_COPY_OF = "Policeman"

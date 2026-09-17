@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://c8yva6u0njnno"]
+
+[ext_resource type="Script" path="res://game/rooms/police_station/room_police_station_state.gd" id="1_llcec"]
+
+[resource]
+resource_name = "PoliceStation"
+script = ExtResource("1_llcec")
+script_name = "PoliceStation"
+scene = "res://game/rooms/police_station/room_police_station.tscn"

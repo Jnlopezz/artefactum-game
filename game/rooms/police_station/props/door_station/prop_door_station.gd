@@ -1,57 +1,67 @@
 # @popochiu-docs-ignore-class
 @tool
-extends PopochiuHotspot
+extends PopochiuProp
 # You can use `E.queue([])` in any of the methods in this script to trigger a sequence of events.
 # Use `await E.queue([])` to pause execution until the sequence completes.
 
 
 #region Virtual ####################################################################################
-# When the hotspot is clicked
+# Called when the prop is clicked
 func _on_click() -> void:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
-	R.goto_room('PoliceStation')
+	R.goto_room('ChapineroMap')
 
 
-# Called when the hotspot is double-clicked
+# Called when the prop is double-clicked
 func _on_double_click() -> void:
-	# Replace the call to E.command_fallback() with your own logic.
+	# Replace the call to E.command_fallback() with your code.
 	PopochiuUtils.e.command_fallback()
-	# Example: on an exit hotspot you could instantly change rooms instead of waiting for the player
-	# to walk there.
-#	await R.current = R.NewRoom
+	# For example, you could make the player instantly do something instead of walking there first
 
 
-# When the hotspot is right clicked
+# Called when the prop is right-clicked
 func _on_right_click() -> void:
 	# Replace the call to E.command_fallback() with your own logic.
 	PopochiuUtils.e.command_fallback()
-	# Example: make the player face this hotspot and say a line:
+	# Example: make the player face this prop and say a line:
 #	await C.player.face_clicked()
-#	await C.player.say("A window")
+#	await C.player.say("A deck of cards")
 
 
-# Called when the hotspot is middle clicked
+# When the prop is middle clicked
 func _on_middle_click() -> void:
-	# Replace the call to E.command_fallback() with your own logic.
+	# Replace the call to E.command_fallback() to implement your code.
 	PopochiuUtils.e.command_fallback()
 
 
-# Called when the hotspot is clicked and there is an inventory item selected
+# Called when the prop is clicked while an inventory item is selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	# Replace the call to E.command_fallback() with your own logic.
 	PopochiuUtils.e.command_fallback()
-	# Example: if a Key is used here, make the player say something.
+	# Example: if the Key is used on this prop, make the player speak.
 #	if _item == I.Key:
-#		await C.player.say("No can do")
+#		await C.player.say("This stuff has no lock!")
 
 
-# Called when the hotspot starts moving
+# Called when an inventory item linked to this Prop (`link_to_item`) is removed
+# from the inventory.
+func _on_linked_item_removed() -> void:
+	pass
+
+
+# Called when an inventory item linked to this Prop (`link_to_item`) is discarded
+# from the inventory.
+func _on_linked_item_discarded() -> void:
+	pass
+
+
+# Called when the prop starts moving
 func _on_movement_started() -> void:
 	pass
 
 
-# Called when the hotspot stops moving
+# Called when the prop stops moving
 func _on_movement_ended() -> void:
 	pass
 
@@ -70,7 +80,7 @@ func _on_movement_ended() -> void:
 #	pass
 #
 # This function will be called whenever the `look_at` command is triggered in the GUI while this
-# hotspot is the target.
+# prop is the target.
 # This keeps the code way more tidy and organized with GUIs with many different commands,
 # as opposed to having a single `match` statement in the general-use methods.
 

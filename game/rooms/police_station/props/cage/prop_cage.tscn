@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://miisqfkac5ld"]
+
+[ext_resource type="Script" uid="uid://cjt60yvr20xpc" path="res://game/rooms/police_station/props/cage/prop_cage.gd" id="1_auvjp"]
+[ext_resource type="Texture2D" uid="uid://b6pb13jf8kubs" path="res://game/rooms/police_station/props/cage/assets/cage_font.png" id="2_qt3ii"]
+
+[node name="Cage" type="Area2D" unique_id=1721318105]
+script = ExtResource("1_auvjp")
+texture = ExtResource("2_qt3ii")
+obstacle = true
+obstacle_polygon = [Vector2(-435, 31), Vector2(-30, -237), Vector2(452, 11), Vector2(93, 316)]
+script_name = "Cage"
+description = "Cage"
+cursor = 1
+interaction_polygon = PackedVector2Array(-325, -433, 77, -216, 323, -350, 342, 23, 80, 243, -322, -2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1120274308]
+texture_filter = 1
+position = Vector2(0, -96)
+texture = ExtResource("2_qt3ii")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1186183921]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=426233532]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-325, -433, 77, -216, 323, -350, 342, 23, 80, 243, -322, -2)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1616090399]
+visible = false
+vertices = PackedVector2Array(-435, 31, -30, -237, 452, 11, 93, 316)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

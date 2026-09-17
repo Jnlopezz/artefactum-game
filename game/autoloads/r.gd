@@ -10,6 +10,8 @@ const PRRecycler := preload("res://game/rooms/recycler/room_recycler.gd")
 const PRBuddy := preload("res://game/rooms/buddy/room_buddy.gd")
 const PRDeport := preload("res://game/rooms/deport/room_deport.gd")
 const PRManager := preload("res://game/rooms/manager/room_manager.gd")
+const PRPoliceStation := preload("res://game/rooms/police_station/room_police_station.gd")
+const PRPoliceman := preload("res://game/rooms/policeman/room_policeman.gd")
 # ---- classes
 
 # nodes ----
@@ -21,6 +23,8 @@ var Recycler: PRRecycler : get = get_Recycler
 var Buddy: PRBuddy : get = get_Buddy
 var Deport: PRDeport : get = get_Deport
 var Manager: PRManager : get = get_Manager
+var PoliceStation: PRPoliceStation : get = get_PoliceStation
+var Policeman: PRPoliceman : get = get_Policeman
 # ---- nodes
 
 # functions ----
@@ -32,5 +36,7 @@ func get_Recycler() -> PRRecycler: return get_runtime_room("Recycler")
 func get_Buddy() -> PRBuddy: return get_runtime_room("Buddy")
 func get_Deport() -> PRDeport: return get_runtime_room("Deport")
 func get_Manager() -> PRManager: return get_runtime_room("Manager")
+func get_PoliceStation() -> PRPoliceStation: return get_runtime_room("PoliceStation")
+func get_Policeman() -> PRPoliceman: return get_runtime_room("Policeman")
 # ---- functions
 

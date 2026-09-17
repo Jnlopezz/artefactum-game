@@ -37,8 +37,9 @@ interaction_polygon = PackedVector2Array(56.380493, -304.3856, 396.34558, -108.6
 
 [node name="Door" parent="Props" unique_id=1669741560 instance=ExtResource("5_ajdep")]
 position = Vector2(256, 654)
-obstacle_polygon = [Vector2(-16, -16), Vector2(17.25, -16.078949), Vector2(16, 16), Vector2(-16, 16)]
+obstacle_polygon = [Vector2(-128.39668, 55.074387), Vector2(121.38223, -97.89713), Vector2(140.79337, -63.338852), Vector2(-116.82644, 92.033035)]
 description = "Salir"
+baseline = -69
 walk_to_point = Vector2(91.53845, -1.6409302)
 look_at_point = Vector2(0, -220)
 interaction_polygon = PackedVector2Array(-102.22821, -346.73846, 92.193726, -438.12775, 99.887146, -65.16925, -99.88718, 63.446106)

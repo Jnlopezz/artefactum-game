@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bsd006kg5mm3d"]
+
+[ext_resource type="Script" path="res://game/rooms/police_station/props/cage_back/prop_cage_back.gd" id="1_64jg2"]
+
+[node name="CageBack" type="Area2D" unique_id=1565500511]
+input_pickable = false
+script = ExtResource("1_64jg2")
+script_name = "CageBack"
+description = "Cage Back"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=42667057]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=224281960]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=17983779]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1863989069]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

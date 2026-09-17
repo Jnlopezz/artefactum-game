@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://m0bd6ny4ig54"]
+
+[ext_resource type="Script" uid="uid://dkcj8jk00r1wr" path="res://game/characters/policeman/character_policeman.gd" id="1_1k78j"]
+[ext_resource type="Texture2D" uid="uid://cgwvtxafnbtgc" path="res://game/characters/policeman/assets/Policia.png" id="2_ff53l"]
+
+[node name="CharacterPoliceman" type="Area2D" unique_id=720446352]
+script = ExtResource("1_1k78j")
+dialog_pos = Vector2(-3.9715576, -347.4368)
+script_name = "Policeman"
+description = "Policia"
+cursor = 8
+interaction_polygon = PackedVector2Array(-84.80002, -283.90002, 88.100006, -282.80002, 85.899994, -3.2000122, -81.5, -3.2000122)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1673217447]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1523391224]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2016815206]
+position = Vector2(0, -144)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ff53l")
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=260123027]
+visible = false
+polygon = PackedVector2Array(-84.80002, -283.90002, 88.100006, -282.80002, 85.899994, -3.2000122, -81.5, -3.2000122)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=200797917]
+visible = false
+vertices = PackedVector2Array(-140.29999, -24.800018, 112.79996, -28.100006, 111.69992, 23.699982, -139.19998, 24.799988)
+affect_navigation_mesh = true
+carve_navigation_mesh = true
